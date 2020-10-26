@@ -7,24 +7,20 @@ class App extends React.Component {
         super(props);
         this.state = {
             moods : [
-                {name: "angry", color:"red", votes: 0, emoji: "&#128553;"},
-                {name: "energetic/excited", color:"orange", votes: 0, emoji: "&#128553"},
-                {name: "happy", color:"yellow", votes: 0, emoji: "&#128553"},
-                {name: "calm", color:"green", votes: 0, emoji: "&#128553"},
-                {name: "sad", color:"blue", votes: 0, emoji: "&#128553"},
-                {name: "exhausted/tired", color:"purple", votes: 0, emoji: "&#128553"}
+                {name: "Angry", color:"red", votes: 0, emoji: "😠"},
+                {name: "Energetic/excited", color:"orange", votes: 0, emoji: "🥳"},
+                {name: "Happy", color:"yellow", votes: 0, emoji: "😀"},
+                {name: "Calm", color:"green", votes: 0, emoji: "😌"},
+                {name: "Sad", color:"blue", votes: 0, emoji: "😢"},
+                {name: "Exhausted/tired", color:"purple", votes: 0, emoji: "😫"}
             ]
         }
     }
-uij
+
     vote (i) {
         let newMoods = [...this.state.moods];
         newMoods[i].votes++;
-        function swap(array, i, j) {
-            var temp = array[i];
-            array[i] = array[j];
-            array[j] = temp;
-        }
+       
         this.setState({moods: newMoods});
     }
 
@@ -41,8 +37,15 @@ render (){
        <button onClick={this.vote.bind(this, i)}>
             <div key={i} id="box" className={mood.color}>
                 <div className="voteCount">
-                    <h1>{mood.votes}</h1>
+                    <h3>{mood.votes}</h3>
                 </div>
+                <span 
+                    className="moodEmoji" 
+                    role="img"
+                    aria-label={mood.emoji ? mood.emoji : ""}
+                    aria-hidden={mood.emoji ? "false" : "true"}>
+                    {mood.emoji}
+                </span>
                 <div className="moodName">
                     <h2>{mood.name}</h2>
                 </div>

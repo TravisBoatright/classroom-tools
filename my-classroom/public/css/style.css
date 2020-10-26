@@ -13,6 +13,10 @@ h2 {
     font-size: 1.6em;
 }
 
+h3 {
+    font-size: 4em;
+}
+
 #container {
     display: flex;
     flex-wrap: wrap;
@@ -66,6 +70,10 @@ button {
     padding:0;
     margin-bottom:20px;
     border: none;
+}
+
+.moodEmoji {
+    font-size:40px;
 }
 
 @media screen and (min-width: 840px) {
