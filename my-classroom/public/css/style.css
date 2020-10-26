@@ -22,10 +22,8 @@ h2 {
 
 #box {
     width: 320px;
-    padding: 50px 0;
+    padding: 50px;
     text-align: center;
-    margin-left: 12px;
-    margin-bottom: 12px;
 }
 
 #box:hover {
@@ -56,4 +54,22 @@ h2 {
 .blue  {
     background-color:#0000D9;
     color:white;
+}
+
+.purple  {
+    background-color:purple;
+    color:white;
+}
+
+button {
+    text-align: center;
+    padding:0;
+    margin-bottom:20px;
+    border: none;
+}
+
+@media screen and (min-width: 840px) {
+    button {
+        margin-left:20px;
+    }
 }
