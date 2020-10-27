@@ -20,43 +20,42 @@ class App extends React.Component {
     vote (i) {
         let newMoods = [...this.state.moods];
         newMoods[i].votes++;
-       
         this.setState({moods: newMoods});
     }
 
 render (){
   return (
+<body>
     <div className="App">
-      <body>
+        <h1>How are you feeling?</h1>
 
-<h1>How are you feeling?</h1>
+        <div className="container">
+            {
+                this.state.moods.map((mood, i) =>
+            <button key={i} onClick={this.vote.bind(this, i)}>
+                    <div id="box" className={mood.color}>
+                        <div className="voteCount">
+                            <h3>{mood.votes}</h3>
+                        </div>
+                        <span 
+                            className="moodEmoji" 
+                            role="img"
+                            aria-label={mood.emoji ? mood.emoji : ""}
+                            aria-hidden={mood.emoji ? "false" : "true"}>
+                            {mood.emoji}
+                        </span>
+                        <div className="moodName">
+                            <h2>{mood.name}</h2>
+                        </div>
+                    </div>
+                    </button>
+                )
+            }
+        </div>
 
-<div className="container">
-    {
-        this.state.moods.map((mood, i) =>
-       <button onClick={this.vote.bind(this, i)}>
-            <div key={i} id="box" className={mood.color}>
-                <div className="voteCount">
-                    <h3>{mood.votes}</h3>
-                </div>
-                <span 
-                    className="moodEmoji" 
-                    role="img"
-                    aria-label={mood.emoji ? mood.emoji : ""}
-                    aria-hidden={mood.emoji ? "false" : "true"}>
-                    {mood.emoji}
-                </span>
-                <div className="moodName">
-                    <h2>{mood.name}</h2>
-                </div>
-            </div>
-            </button>
-        )
-    }
-</div>
-
-</body>
     </div>
+</body>
+
   );
  }
 }

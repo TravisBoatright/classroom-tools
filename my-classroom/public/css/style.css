@@ -1,83 +1,96 @@
+
 body {
     width:100vw;
     font-family: sans-serif;
     align-content: center;
-}
-
-h1 {
+    background-color: #F3F1ED;
+  }
+  
+  h1 {
     font-size: 2em;
     text-align: center;
-}
-
-h2 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  
+  }
+  
+  h2 {
     font-size: 1.6em;
-}
-
-h3 {
+  }
+  
+  h3 {
     font-size: 4em;
-}
-
-#container {
+  }
+  
+  #container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-}
-
-#box {
+  }
+  
+  #box {
     width: 320px;
     padding: 50px;
     text-align: center;
-}
-
-#box:hover {
-    box-shadow: 0px 2px 24px 4px #bbb;
+    border-radius: 20px;
+    border-bottom: 10px solid rgba(0,0,0,.25);
+  }
+  
+  #box:hover {
+    border-bottom: 10px solid rgba(0,0,0,.15);
     cursor: pointer;
-}
+    box-shadow: inset 10000px 0 0 rgba(255, 255, 255, 0.5);
+  }
 
-.red {
-    background-color:#DB0000;
-    color:white;
-}
-
-.orange {
-    background-color:#FA7D00;
-    color:black;
-}
-
-.yellow {
-    background-color:#E8E800;
-    color:black;
-}
-
-.green {
-    background-color:#007D3F;
-    color:white;
-}
-
-.blue  {
-    background-color:#0000D9;
-    color:white;
-}
-
-.purple  {
-    background-color:purple;
-    color:white;
-}
-
-button {
+  #box:active {
+    border-bottom: 2px solid rgba(0,0,0,.15);
+  }
+  
+  .red {
+    background-color:#ff4d61;
+    color:#000000;
+  }
+  
+  .orange {
+    background-color:#ffa93d;
+    color:#000000;
+  }
+  
+  .yellow {
+    background-color:#ffc82d;
+    color:#000000;
+  }
+  
+  .green {
+    background-color:#85ce51;
+    color:#000000;
+  }
+  
+  .blue  {
+    background-color:#28b0ea;
+    color:#000000;
+  }
+  
+  .purple  {
+    background-color:#D763BB;
+    color:#000000;
+  }
+  
+  button {
     text-align: center;
     padding:0;
     margin-bottom:20px;
-    border: none;
-}
-
-.moodEmoji {
+    background-color: transparent;
+    border:none;
+  }
+  
+  .moodEmoji {
     font-size:40px;
-}
-
-@media screen and (min-width: 840px) {
+  }
+  
+  @media screen and (min-width: 840px) {
     button {
         margin-left:20px;
     }
-}
+  }
